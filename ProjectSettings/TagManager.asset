@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pillar
   - rock
+  - bake
   layers:
   - Default
   - TransparentFX

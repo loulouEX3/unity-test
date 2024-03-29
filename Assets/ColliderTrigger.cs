@@ -8,19 +8,15 @@ public class CutsceneEnter : MonoBehaviour
     public GameObject Fireworks;
     public GameObject Sun;
     public GameObject AnimationSun;
+    public GameObject Bird;
 
     private void OnTriggerStay (Collider other)
     {
         this.gameObject.GetComponent<BoxCollider>().enabled = false;
-        Sun.SetActive(false);
+        Sun.transform.Rotate(-50, 0, 0);
         Fireworks.SetActive(true);
-       // AnimationSun.SetActive(true);
-        //StartCoroutine(FinishCut());
+        Bird.SetActive(false);
     }
 
-    IEnumerator FinishCut()
-    {
-        yield return new WaitForSeconds(3);
-        AnimationSun.SetActive(false);
-    }
+    
 }
